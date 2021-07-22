@@ -1,83 +1,59 @@
 import React from "react";
 import './index.css';
 import { Link } from "react-router-dom";
-import logo from "../../assets/img/LOGOSITE.jpg";
+import background from "../../../src/assets/img/background.jpg"
 
 
 export default function Home(){
 
     return(
-          
-        <header>
-        <div className="page-wrapper">            
-		<aside className="menu-sidebar d-none d-lg-block">
-			<div className="logo">
-				<Link to="#">
-                <img src={logo} alt="Revisão Textual" class="img-responsive" />
+     <div className="principal"> 
+        <div className="cabecalho">
+            <div className="logo-cabecalho">
+                <Link to="#">
+                    A Revisora                  
 				</Link>
-			</div>
-			<div className="menu-sidebar-content js-scrollbar1">
-				<nav className="navbar-sidebar">
-					<ul className="list-unstyled navbar-list">
-						<li>
-							<Link to="#">Sobre a Empresa</Link>
-						</li>
-						<li>
-							<Link to="#">Serviços</Link>
-						</li>
-						<li>
-							<Link to="#">Clientes</Link>
-						</li>
+                <div className="Pesquisa">
+                    <form className="form-header" onSubmit={() => false} method="GET">
+                        <input className="au-input au-input-xl" type="text" name="search"
+                                 placeholder="Busca ..." />
+                                <button className="au-btn-submit" type="submit">
+                                     Pesquisa
+								</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        <div className="menu">
+            <ul className="menu-ul">
+                <li><Link className="ativo" to="#">Apresentação</Link></li>
+                <li><Link to="#">Serviços</Link></li>
+                <li><Link to="#">Central do Cliente</Link></li>
+                <li><Link to="#">Contato</Link></li>
+                <li className="cadastro"><Link  to="#">Cadastrar</Link></li>
+            </ul>
+        
+        </div> 
+        <div className="corpo">
+            <div className="artigos">
 
-					</ul>
-				</nav>
-			</div>
-		</aside>
-        <div className="page-container">
-        <header className="header-desktop">
-				<div className="section-content section-content-p30">
-					<div className="container-fluid">
-						<div className="header-wrap">
-                            <div className="menu">
-                                <ul>
-                                    <li><Link to="#">Apresentação</Link></li>
-                                    <li><Link to="#">Serviços</Link></li>
-                                    <li><Link to="#">Central do Cliente</Link></li>
-                                    <li><Link to="#">Contato</Link></li>
-                                </ul>
-                            </div>
-                                                            
-							<div className="cart-area d-n">
-								<Link to="shopping-detail.html">
-                                <form class="form-header" onSubmit={() => false}  method="GET">
-                                    <button class="au-btn-submit" type="submit">
-                                        Cadastrar
-                                    </button>
-							    </form>
-								</Link>
-							</div>
-						</div>
-						<div className="account-wrap"></div>
-					</div>
-				</div>
-			</header>
-            <h1>Corpo do site</h1>
-            <h1>Corpo do site</h1>
-            <h1>Corpo do site</h1>
-            <h1>Corpo do site</h1>
-            <h1>Corpo do site</h1>
-        </div>
-        </div>
-        <footer>
+            </div>
+            <div className="barra-lateral">
+
+            </div>
+        </div>   
+        <div className="rodape">
             <ul>
                 <li><Link to="#">Sobre</Link></li>
                 <li><Link to="#">Ajuda</Link></li>
                 <li><Link to="#">Contato</Link></li>
                 
-            </ul>    
-        </footer>   
-        </header>
-        
+            </ul>   
+
+        </div>
+      
+      </div>  
     )
 
 
