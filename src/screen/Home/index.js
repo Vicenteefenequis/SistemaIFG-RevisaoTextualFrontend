@@ -1,7 +1,8 @@
 import React from "react";
 import './index.css';
 import { Link } from "react-router-dom";
-import background from "../../../src/assets/img/background.jpg"
+import background from "../../../src/assets/img/background-fundo.jpg"
+
 
 
 export default function Home(){
@@ -23,7 +24,7 @@ export default function Home(){
                     </form>
                 </div>
             </div>
-            
+           
         </div>
         <div className="menu">
             <ul className="menu-ul">
@@ -37,7 +38,9 @@ export default function Home(){
         </div> 
         <div className="corpo">
             <div className="artigos">
-
+                <div className="fundo-home">
+                  <img src={background} width="100%" heigth="50"alt="bakground-home" className="background-home-foto"></img>
+                </div>
             </div>
             <div className="barra-lateral">
 
@@ -47,10 +50,9 @@ export default function Home(){
             <ul>
                 <li><Link to="#">Sobre</Link></li>
                 <li><Link to="#">Ajuda</Link></li>
-                <li><Link to="#">Contato</Link></li>
-                
+                <li><Link to="#">Contato</Link></li>              
             </ul>   
-
+            < p className="criador" >Copyright (C)  Vicente / Witney 2021</p>
         </div>
       
       </div>  
