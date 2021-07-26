@@ -5,6 +5,11 @@ import background from "../../../src/assets/img/background-fundo.jpg"
 
 
 
+
+
+
+
+
 export default function Home(){
 
     return(
@@ -29,10 +34,10 @@ export default function Home(){
         <div className="menu">
             <ul className="menu-ul">
                 <li><Link className="ativo" to="#">Apresentação</Link></li>
-                <li><Link to="#">Serviços</Link></li>
+                <li><Link to="/servicos">Serviços</Link></li>
                 <li><Link to="#">Central do Cliente</Link></li>
                 <li><Link to="#">Contato</Link></li>
-                <li className="cadastro"><Link  to="#">Cadastrar</Link></li>
+                <li className="cadastro"><Link  to="/login">Cadastrar</Link></li>
             </ul>
         
         </div> 
@@ -42,8 +47,35 @@ export default function Home(){
                   <img src={background} width="100%" heigth="50"alt="bakground-home" className="background-home-foto"></img>
                 </div>
             </div>
-            <div className="barra-lateral">
-
+            <div className="servicos">
+                <div className="box">
+                    <div className="box-content">
+                        <div className="icon-home">
+                            
+                        </div>
+                        <h2 className="titulo">Sobre a Empresa</h2>
+                        <p>Localizada em Goiânia - Go.</p>
+                        <p>Atendemos clientes de todo o Brasil!</p>
+                    </div>
+                </div>
+                <div className="box">
+                    <div className="box-content">
+                        <h2 className="titulo">Serviços</h2>
+                        <li>Revisão gramatical</li>
+                        <li>Adequação às normas da ABNT</li>
+                        <li>Textual-gramatical</li>
+                        <li>Edição/formatação</li>
+                    </div>
+                </div>
+                <div className="box">
+                    <div className="box-content">
+                        <h2 className="titulo">Clientes</h2>
+                        <p>Atendemos os melhores!</p>
+                        <p>Se você objetiva publicar o seu trabalho, 
+                        conte com a experiência e a agilidade de nossa equipe.</p>
+                        <Link to="#">Solicite um orçamento!</Link>
+                    </div>
+               </div>
             </div>
         </div>   
         <div className="rodape">

@@ -6,6 +6,7 @@
   margin: 0px;
   font-family: sans-serif;
   color: #444;
+  overflow: hidden;
 }
 
 .cabecalho{
@@ -161,4 +162,61 @@ input.au-input.au-input-xl{
   color: #fff;
   display: block;
   padding-bottom: 5px;
+}
+
+.servicos {
+background: #fff;
+display: flex;
+
+}
+
+.servicos .box{
+  padding: 45px 20px 20px 20px;
+  border-radius: 3px;
+  background: #fff;
+  display: inline-block;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  width: calc(100% + 32px);
+  margin: 30px;
+  
+  
+}
+.servicos .box .box-content{
+  background: #d6d4d4;
+  width: 270px;
+  height: 251px;
+  height: auto;
+  border-color: #e1e1e1;
+  padding: 16px;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+  border-radius: 4px;
+
+}
+.servicos .box .box-content .titulo{
+  border: medium none;
+  padding: 0;
+  position: relative;
+  margin: 0 0 16px 0;
+  clear: none;
+  overflow: hidden;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  color: #741B75;
+}
+
+.servicos .box-content p, li,a{
+    text-decoration: none;
+    text-align: justify;
+    font-size: 1rem;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    margin: 0%;
 }

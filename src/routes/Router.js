@@ -1,8 +1,9 @@
 import React from 'react';
 import { Route, BrowserRouter } from "react-router-dom";
 import SignIn from '../screen/SignIn'
-import Dashboard from '../screen/Dashboard'
+import Cadastrar from '../screen/Cadastrar'
 import Home from '../screen/Home';
+import Servicos from '../screen/Servicos';
 
 
 const Router = () => {
@@ -10,7 +11,8 @@ const Router = () => {
     <BrowserRouter>
       <Route component={Home} path="/" exact/>
       <Route component={SignIn} path="/login" exact/>
-      <Route component={Dashboard} path="/dashboard"/>
+      <Route component={Cadastrar} path="/cadastrar"/>
+      <Route component={Servicos} path="/servicos"/>
     </BrowserRouter>
   );
 }
