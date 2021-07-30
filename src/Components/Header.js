@@ -33,8 +33,8 @@ const ItemsNavigator = [
     label: "Contato",
   },
   {
-    route: "/cadastro",
-    label: "Cadastra-se",
+    route: "/registrar",
+    label: "Registre-se",
   },
 ];
 
@@ -92,9 +92,11 @@ const Header = () => {
         >
           <List>
             {ItemsNavigator.map((text, index) => (
-              <ListItem button key={index}>
-                <ListItemText primary={text.label} />
-              </ListItem>
+              <Link key={index} to={text.route}>
+                <ListItem button key={index}>
+                  <ListItemText primary={text.label} />
+                </ListItem>
+              </Link>
             ))}
           </List>
         </Box>
