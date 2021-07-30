@@ -5,7 +5,7 @@ import TextField from "@material-ui/core/TextField";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import DefaultLayout from "../../Components/DefaultLayout";
-import { Box } from "@material-ui/system";
+import Box from "@material-ui/core/Box";
 
 export default function SignIn() {
   return (
