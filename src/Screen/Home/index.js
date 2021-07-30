@@ -5,13 +5,37 @@ import OrcamentoImage from "../../assets/01.png";
 import BoletoImage from "../../assets/04.png";
 import LocalidadeImage from "../../assets/05.png";
 import ClientesImage from "../../assets/07.png";
+import DefaultLayout from "../../Components/DefaultLayout";
 
 const Home = () => {
   return (
-    <div style={{ marginBottom: 50 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={6}>
-          <Hidden xlDown>
+    <DefaultLayout>
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          md={12}
+          lg={4}
+          xl={6}
+          sx={{ height: "100vh" }}
+          display="grid"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Box>
+            <Typography variant="h2" component="h1" gutterBottom>
+              A Revisora
+            </Typography>
+            <Typography variant="p" component="p" gutterBottom>
+              Revisão linguística e revisão técnica
+            </Typography>
+            <Button variant="contained" color="secondary" sx={{ marginTop: 5 }}>
+              Solicite um orçamento
+            </Button>
+          </Box>
+        </Grid>
+        <Hidden lgDown>
+          <Grid item xs={12} md={6}>
             <div
               style={{
                 position: "absolute",
@@ -49,44 +73,26 @@ const Home = () => {
                 }}
               />
             </div>
-          </Hidden>
-        </Grid>
-        <Grid
-          item
-          xs={6}
-          lg={6}
-          sx={{ display: "flex", height: "100vh", marginLeft: 10 }}
-          alignItems="center"
-          flexDirection="column"
-          justifyContent="center"
-        >
-          <div>
-            <Typography variant="h2" component="h1" gutterBottom>
-              A Revisora
-            </Typography>
-            <Typography variant="p" component="p" gutterBottom>
-              Revisão linguística e revisão técnica
-            </Typography>
-            <Button variant="contained" color="secondary" sx={{ marginTop: 5 }}>
-              Solicite um orçamento
-            </Button>
-          </div>
-        </Grid>
+          </Grid>
+        </Hidden>
       </Grid>
       <Grid
         container
         justifyContent="center"
-        alignItems="center"
-        flexDirection="column"
+        gridTemplateColumns="auto"
+        display="grid"
       >
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography textAlign="center" variant="h2" component="h1" gutterBottom>
           Sobre a empresa
         </Typography>
         <Grid
-          container
-          justifyContent="space-between"
-          alignItems="center"
-          flexDirection="row"
+          item
+          display="grid"
+          gridTemplateColumns={{
+            sm: "auto",
+            md: "repeat(2,1fr)",
+            lg: "repeat(4,1fr)",
+          }}
         >
           <CardAbout
             title="Orcamento"
@@ -106,48 +112,37 @@ const Home = () => {
           <CardAbout
             title="Clientes"
             description="Atendemos os 
-          melhores"
+            melhores"
             image={ClientesImage}
           />
         </Grid>
       </Grid>
-    </div>
+    </DefaultLayout>
   );
 };
 
 const CardAbout = ({ title, description, image }) => {
   return (
-    <Box
-      flexDirection="column"
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: 255,
-        height: 212,
-      }}
+    <Grid
+      item
+      xs={12}
+      display="grid"
+      gridTemplateColumns="auto"
+      gridTemplateRows="80px auto auto"
+      height="220px"
+      alignItems="center"
+      justifyContent="center"
     >
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: 70,
-          height: 70,
-          marginBottom: 2,
-          borderRadius: 50,
-          bgcolor: "#F4F5F7",
-        }}
-      >
+      <Box sx={{ alignSelf: "center", justifySelf: "center" }}>
         <img src={image} alt="A editora" />
       </Box>
-      <Typography variant="h6" component="h6" gutterBottom>
+      <Typography variant="h6" component="h6" textAlign="center" gutterBottom>
         {title}
       </Typography>
       <Typography variant="p" textAlign="center" component="p" gutterBottom>
         {description}
       </Typography>
-    </Box>
+    </Grid>
   );
 };
 

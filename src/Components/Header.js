@@ -13,13 +13,29 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import List from "@material-ui/core/List";
 import { Hidden } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const ItemsNavigator = [
-  "Apresentação",
-  "Central do cliente",
-  "Serviços",
-  "Contato",
-  "Cadastra-se",
+  {
+    route: "/",
+    label: "Apresentação",
+  },
+  {
+    route: "/cliente",
+    label: "Central do cliente",
+  },
+  {
+    route: "/servico",
+    label: "Serviços",
+  },
+  {
+    route: "/contato",
+    label: "Contato",
+  },
+  {
+    route: "/registrar",
+    label: "Registre-se",
+  },
 ];
 
 const Header = () => {
@@ -54,9 +70,11 @@ const Header = () => {
           }}
         >
           {ItemsNavigator.map((text, index) => (
-            <ListItem button key={index}>
-              <ListItemText primary={text} />
-            </ListItem>
+            <Link key={index} to={text.route}>
+              <ListItem>
+                <ListItemText primary={text.label} />
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Toolbar>
@@ -74,9 +92,11 @@ const Header = () => {
         >
           <List>
             {ItemsNavigator.map((text, index) => (
-              <ListItem button key={index}>
-                <ListItemText primary={text} />
-              </ListItem>
+              <Link key={index} to={text.route}>
+                <ListItem button key={index}>
+                  <ListItemText primary={text.label} />
+                </ListItem>
+              </Link>
             ))}
           </List>
         </Box>
