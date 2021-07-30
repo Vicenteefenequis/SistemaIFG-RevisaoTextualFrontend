@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import DefaultLayout from "../../Components/DefaultLayout";
 import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
-import { Box } from "@material-ui/system";
+import Box from "@material-ui/core/Box";
 import { Link as LinkRoute } from "react-router-dom";
 
 export default function SignIn() {
@@ -15,6 +15,7 @@ export default function SignIn() {
     <DefaultLayout>
       <Box
         mt={5}
+        mb={5}
         display="flex"
         flexDirection="column"
         alignItems="center"
