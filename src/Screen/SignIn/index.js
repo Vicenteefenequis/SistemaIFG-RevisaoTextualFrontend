@@ -6,8 +6,19 @@ import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import DefaultLayout from "../../Components/DefaultLayout";
 import Box from "@material-ui/core/Box";
+import Grid from "@material-ui/core/Grid";
+import Link from "@material-ui/core/Link";
+import { Link as LinkRoute, Redirect } from "react-router-dom";
+import { useSignInHelper } from "./helper";
 
 export default function SignIn() {
+  const { setNomeUsuario, setSenha, senha, nomeUsuario, handleSubmit, token } =
+    useSignInHelper();
+
+  if (token) {
+    return <Redirect to="/cliente" />;
+  }
+
   return (
     <DefaultLayout>
       <Box
@@ -23,12 +34,14 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Loguin
         </Typography>
-        <form noValidate>
+        <form onSubmit={handleSubmit} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
+            onChange={(event) => setNomeUsuario(event.target.value)}
+            value={nomeUsuario}
             id="nomeUsuario"
             label="Nome de Usuario"
             name="nomeUsuario"
@@ -39,6 +52,8 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
+            onChange={(event) => setSenha(event.target.value)}
+            value={senha}
             name="senha"
             label="Senha"
             type="password"
@@ -55,6 +70,13 @@ export default function SignIn() {
           >
             Logar
           </Button>
+          <Grid container>
+            <Grid item xs>
+              <Link to="/registrar" variant="body2" component={LinkRoute}>
+                Não tem conta? Registrar
+              </Link>
+            </Grid>
+          </Grid>
         </form>
       </Box>
     </DefaultLayout>

@@ -46,7 +46,6 @@ export default function SignIn() {
             id="nomeUsuario"
             label="Nome de Usuario"
             name="nomeUsuario"
-            autoFocus
           />
           <TextField
             variant="outlined"
