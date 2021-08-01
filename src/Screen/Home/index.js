@@ -6,6 +6,7 @@ import BoletoImage from "../../assets/04.png";
 import LocalidadeImage from "../../assets/05.png";
 import ClientesImage from "../../assets/07.png";
 import DefaultLayout from "../../Components/DefaultLayout";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -30,7 +31,7 @@ const Home = () => {
               Revisão linguística e revisão técnica
             </Typography>
             <Button variant="contained" color="secondary" sx={{ marginTop: 5 }}>
-              Solicite um orçamento
+              <Link to = "../servico">Solicite um orçamento</Link>
             </Button>
           </Box>
         </Grid>
