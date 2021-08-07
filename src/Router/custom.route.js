@@ -5,8 +5,6 @@ import { useAuth } from "../hooks/useAuth";
 const Route = ({ isPrivate = false, component: Component, ...rest }) => {
   const { token } = useAuth();
 
-  console.log(!!token);
-
   return (
     <DOMRoute
       render={(props) =>
