@@ -74,13 +74,13 @@ const CardService = ({ title, description, values }) => {
         </Typography>
         <Box mt={3}>
           <Typography variant="p" component="p">
-            Lauda: R$ {values.get("lauda")}
+            Lauda: {values.get("lauda")}
           </Typography>
           <Typography variant="p" component="p">
-            Pagina: R$ {values.get("pagina")}
+            Pagina: {values.get("pagina")}
           </Typography>
           <Typography variant="p" component="p">
-            Palavra: R$ {values.get("palavra")}
+            Palavra: {values.get("palavra")}
           </Typography>
         </Box>
         <Button
