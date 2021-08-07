@@ -15,7 +15,6 @@ export function usePagamentoHelper(idOrcamento) {
   }, []);
 
   useEffect(() => {
-    console.log("boleto", boleto);
     apiRevisaoTextual.get(`/budget/${idOrcamento}`).then((response) => {
       setOrcamento(response.data.data);
     });
