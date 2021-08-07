@@ -6,8 +6,10 @@ import BoletoImage from "../../assets/04.png";
 import LocalidadeImage from "../../assets/05.png";
 import ClientesImage from "../../assets/07.png";
 import DefaultLayout from "../../Components/DefaultLayout";
+import { useHistory } from "react-router";
 
 const Home = () => {
+  const history = useHistory();
   return (
     <DefaultLayout>
       <Grid container>
@@ -29,7 +31,12 @@ const Home = () => {
             <Typography variant="p" component="p" gutterBottom>
               Revisão linguística e revisão técnica
             </Typography>
-            <Button variant="contained" color="secondary" sx={{ marginTop: 5 }}>
+            <Button
+              onClick={() => history.push("/cliente")}
+              variant="contained"
+              color="secondary"
+              sx={{ marginTop: 5 }}
+            >
               Solicite um orçamento
             </Button>
           </Box>
@@ -58,18 +65,6 @@ const Home = () => {
                   right: "30%",
                   bottom: "-7%",
                   objectFit: "scale-down",
-                }}
-              />
-
-              <div
-                style={{
-                  position: "absolute",
-                  left: "20%",
-                  bottom: "-20%",
-                  width: 70,
-                  height: 70,
-                  borderRadius: 50,
-                  backgroundColor: "#75E3EA",
                 }}
               />
             </div>
