@@ -18,7 +18,7 @@ function Copyright() {
 
 const Footer = () => {
   return (
-    <Grid xs={12} sx={{ backgroundColor: "#000" }}>
+    <Grid sx={{ backgroundColor: "#000" }}>
       <Typography color="white" variant="h6" align="center" gutterBottom>
         Revisão Textual
       </Typography>
