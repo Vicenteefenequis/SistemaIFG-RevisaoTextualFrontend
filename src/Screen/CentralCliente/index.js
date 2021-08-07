@@ -88,6 +88,8 @@ const CentralCliente = () => {
               type="file"
               name="photo"
               id="INPUT_FILE"
+              required
+              accept="application/pdf"
               style={{ display: "none" }}
               disabled={isFileSend}
               onChange={handleChangeUploadFile}
