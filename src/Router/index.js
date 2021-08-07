@@ -9,6 +9,7 @@ import SignUp from "../Screen/SignUp";
 import CentralCliente from "../Screen/CentralCliente";
 import Pagamento from "../Screen/Pagamento";
 import { BudgetContextProvider } from "../hooks/useBudget";
+import Contato from "../Screen/Contato";
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
           <Route component={Servico} path="/servico" />
           <Route component={CentralCliente} path="/cliente" isPrivate />
           <Route component={Pagamento} path="/pagamento/:id" isPrivate />
+          <Route component={Contato} path="/contato" />
           <Route component={SignIn} path="/entrar" />
           <Route component={SignUp} path="/registrar" />
         </Switch>
