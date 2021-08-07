@@ -11,7 +11,10 @@ const Route = ({ isPrivate = false, component: Component, ...rest }) => {
     <DOMRoute
       render={(props) =>
         isPrivate && !token ? (
-          <Redirect to={{ pathname: "/", ...props }} />
+          <>
+            {alert("Realize o login para ter acesso a essa área")}
+            <Redirect to={{ pathname: "/", ...props }} />
+          </>
         ) : (
           <Component />
         )

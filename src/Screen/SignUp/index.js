@@ -9,8 +9,19 @@ import Grid from "@material-ui/core/Grid";
 import Link from "@material-ui/core/Link";
 import Box from "@material-ui/core/Box";
 import { Link as LinkRoute } from "react-router-dom";
+import { useSignupHelper } from "./helper";
 
 export default function SignIn() {
+  const {
+    senha,
+    setNome,
+    setNomeUsuario,
+    nomeUsuario,
+    nome,
+    handleSubmit,
+    setSenha,
+  } = useSignupHelper();
+
   return (
     <DefaultLayout>
       <Box
@@ -27,10 +38,12 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Cadastrar
         </Typography>
-        <form style={{ width: "80%" }} noValidate>
+        <form onSubmit={handleSubmit} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
+            onChange={(e) => setNome(e.target.value)}
+            value={nome}
             required
             fullWidth
             id="nome"
@@ -41,6 +54,8 @@ export default function SignIn() {
           <TextField
             variant="outlined"
             margin="normal"
+            onChange={(e) => setNomeUsuario(e.target.value)}
+            value={nomeUsuario}
             required
             fullWidth
             id="nomeUsuario"
@@ -52,6 +67,8 @@ export default function SignIn() {
             margin="normal"
             required
             fullWidth
+            onChange={(e) => setSenha(e.target.value)}
+            value={senha}
             name="senha"
             label="Senha"
             type="password"

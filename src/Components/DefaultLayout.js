@@ -7,7 +7,6 @@ const DefaultLayout = ({ children }) => {
   return (
     <Grid
       container
-      xs={12}
       display="grid"
       gridTemplateRows="64px auto 87px"
       minHeight="100vh"

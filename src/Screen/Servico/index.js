@@ -3,6 +3,7 @@ import React from "react";
 import DefaultLayout from "../../Components/DefaultLayout";
 import { ArrowRight } from "@material-ui/icons";
 import { useServicoHelper } from "./helper";
+import { useHistory } from "react-router";
 
 const Servico = () => {
   const { employs } = useServicoHelper();
@@ -51,6 +52,7 @@ const Servico = () => {
 };
 
 const CardService = ({ title, description, values }) => {
+  const history = useHistory();
   return (
     <Box
       sx={{
@@ -72,16 +74,17 @@ const CardService = ({ title, description, values }) => {
         </Typography>
         <Box mt={3}>
           <Typography variant="p" component="p">
-            Lauda: R$ {values.get("lauda")}
+            Lauda: {values.get("lauda")}
           </Typography>
           <Typography variant="p" component="p">
-            Pagina: R$ {values.get("pagina")}
+            Pagina: {values.get("pagina")}
           </Typography>
           <Typography variant="p" component="p">
-            Palavra: R$ {values.get("palavra")}
+            Palavra: {values.get("palavra")}
           </Typography>
         </Box>
         <Button
+          onClick={() => history.push("/cliente")}
           style={{
             display: "flex",
             flexDirection: "row",

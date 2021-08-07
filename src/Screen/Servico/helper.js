@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { apiRevisaoTextual } from "../../config/api";
 
-function convertCurrency(valor) {
+export function convertCurrency(valor) {
   return new Intl.NumberFormat("pt-br", {
     style: "currency",
     currency: "BRL",
