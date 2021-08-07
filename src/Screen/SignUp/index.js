@@ -38,7 +38,7 @@ export default function SignIn() {
         <Typography component="h1" variant="h5">
           Cadastrar
         </Typography>
-        <form onSubmit={handleSubmit} style={{ width: "80%" }} noValidate>
+        <form onSubmit={handleSubmit} noValidate>
           <TextField
             variant="outlined"
             margin="normal"
